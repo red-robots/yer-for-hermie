@@ -33,7 +33,7 @@
 							 		</a>
 						 		</div>
 					 	<?php } ?>
-					 		<?php if( $isMap == 'yes' && $gallery ): ?>
+					 		<?php /*if( $isMap == 'yes' && $gallery ): ?>
 					 			<div class="gallery">
 							    <?php foreach( $gallery as $image ): ?>
 						            <div class="logo">
@@ -41,7 +41,7 @@
 						            </div>
 							        <?php endforeach; ?>
 							    </div>
-							   <?php endif; ?>
+							<?php endif; */ ?>
 					 	</div>
 				 	<?php } ?>
 				 	<!-- <?php if( $btnText ) { ?>

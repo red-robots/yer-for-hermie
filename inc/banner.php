@@ -1,10 +1,12 @@
 <?php 
+	/*
+	if( !$tagline ) {
+		$tagline = get_the_title();
+	} 
+	*/
 
-
-
-if( !$tagline ) {
-	$tagline=get_the_title();
-	} ?>
+	$tagline = !empty($tagline) ?  $tagline : '';
+?>
 <div class="banner hero-wrapper" style="background-image: url(<?php echo $thumb; ?>);">
 
 <div class="et_pb_row et_pb_row_10">

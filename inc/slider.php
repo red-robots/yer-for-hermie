@@ -27,12 +27,11 @@
 					 	<div class="text <?php echo $c; ?>">
 					 		<h2><?php echo $title; ?></h2>
 					 		<?php if( $btnText ) { ?>
-						 		<div class="tab-links">
 						 		<div class="btn">
 							 		<a href="<?php echo $btnLink; ?>">
 							 			<?php echo $btnText; ?>
 							 		</a>
-						 		</div></div>
+						 		</div>
 					 	<?php } ?>
 					 		<?php if( $isMap == 'yes' && $gallery ): ?>
 					 			<div class="gallery">

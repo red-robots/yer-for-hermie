@@ -185,6 +185,8 @@ jQuery(document).ready(function($ ) {
   		
   	}
 
+    
+
   	// get the URL hash
   	var urlHash = window.location.hash.substring(1);
 
@@ -194,6 +196,35 @@ jQuery(document).ready(function($ ) {
   	}
 
   	
+    $('body').on('click', '.menu-item-type-custom.menu-item-object-custom a', function(e){
+
+        e.preventDefault();
+
+        if ( window.location.pathname == '/' ){
+
+            if(! $(this).closest('li').hasClass('tab-links')){
+                
+                var urlHash = $(this).attr("href").substring(2);
+
+                 handleHash(urlHash);              
+
+                window.location.href.split('#')[0];
+
+                $("html, body").animate({ scrollTop: 0 }, 1000); 
+
+            }
+
+        } else {
+
+            var url = $(this).attr("href");
+            //console.log(url);
+            window.location.href = url;           
+
+        }
+
+        
+        
+    });
 
   	// if the tab links are clicked from the main menu
   	$('body').on('click', '#menu-main-menu li a, #menu-main-menu-1 li a', function(e) {
@@ -243,7 +274,7 @@ jQuery(document).ready(function($ ) {
 		    $("html, body").animate({ scrollTop: 0 }, 500);		   
 		}  else {
             // Other page
-            console.log(window.location.pathname);
+            // console.log(window.location.pathname);
         }
 		
   		

@@ -1834,6 +1834,7 @@ html[xmlns] .flexslider .slides{display:block}
 .learn-banner{width:100%;position:absolute;bottom:14%;padding:20px 0;left:0;background-color:rgba(255,255,255,0.1);text-align:center}
 .learn-banner .btn{width:auto;display:inline-block}
 .learn-banner .btn a{background-color:#fab900;color:#fff;padding:3px 30px}
+.text.gallery h2 span.yellow{font-size:38px;display:block;text-align:center;color:yellow}
 .widget{margin:0 0 1.5em}
 .widget select{max-width:100%}
 *{-webkit-hyphens:none}

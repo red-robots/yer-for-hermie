@@ -127,6 +127,27 @@ jQuery(document).ready(function($ ) {
 
   	});
 
+    $('body').on('click', '.text .btn a', function(e){
+        e.preventDefault();
+        var urlHash = $(this).attr("href");
+        var url = getLocation(urlHash); 
+        var pathname = url.pathname.substring(1).slice(0, -1);       
+        var newUrl = pathname;
+        handleHash(newUrl);             
+
+        window.location.href.split('#')[0];
+
+        $("html, body").animate({ scrollTop: 0 }, 1000);
+
+        //console.log(newUrl);
+    });
+
+    function getLocation(href) {
+        var l = document.createElement("a");
+        l.href = href;
+        return l;
+    };
+
   	$('body').on('click', '.tabs-nav-controls li', function(e) {
 
   		/*****************************************************

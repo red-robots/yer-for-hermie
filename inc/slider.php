@@ -3,23 +3,23 @@
 		<ul class="slides">
 			<?php  while( have_rows('slider') ) : the_row();
 
-			$title = get_sub_field('text');
-			$img = get_sub_field('slide_image');
-			$btnText = get_sub_field('button_text');
-			$btnLink = get_sub_field('button_link');
-			$isMap = get_sub_field('is_this_the_map_slide');
-			$gallery = get_sub_field('gallery');
+					$title = get_sub_field('text');
+					$img = get_sub_field('slide_image');
+					$btnText = get_sub_field('button_text');
+					$btnLink = get_sub_field('button_link');
+					$isMap = get_sub_field('is_this_the_map_slide');
+					$gallery = get_sub_field('gallery');
 
-			// echo '<pre>';
-			// print_r($isMap);
-			// echo '</pre>';
+					// echo '<pre>';
+					// print_r($isMap);
+					// echo '</pre>';
 
-			if( $isMap == 'yes' ) { 
-				$c = 'gallery';
-			} else {$c='';}
+					if( $isMap == 'yes' ) { 
+						$c = 'gallery';
+					} else {$c='';}
 
 
-	 ?>
+			 ?>
 
 				 <li>
 				 	
@@ -44,7 +44,7 @@
 							<?php endif; */ ?>
 					 	</div>
 				 	<?php } ?>
-				 	<!-- <?php if( $btnText ) { ?>
+				 	<?php /*if( $btnText ) { ?>
 					 	<div class="learn-banner">
 					 		<div class="btn">
 						 		<a href="<?php echo $btnLink; ?>">
@@ -52,7 +52,7 @@
 						 		</a>
 					 		</div>
 					 	</div>
-				 	<?php } ?> -->
+				 	<?php } */ ?>
 				 	<img src="<?php echo $img['url']; ?>"  alt="<?php echo $img['alt']; ?>">
 				 </li>
 

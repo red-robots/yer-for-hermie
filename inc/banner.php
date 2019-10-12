@@ -1,4 +1,5 @@
 <?php 
+	
 	/*
 	if( !$tagline ) {
 		$tagline = get_the_title();

@@ -129,15 +129,41 @@ jQuery(document).ready(function($ ) {
 
     $('body').on('click', '.text .btn a', function(e){
         e.preventDefault();
-        var urlHash = $(this).attr("href");
-        var url = getLocation(urlHash); 
-        var pathname = url.pathname.substring(1).slice(0, -1);       
-        var newUrl = pathname;
-        handleHash(newUrl);             
+        
+        var urlHash = $(this).attr("href").substring(2);
+        //console.log(urlHash);                
 
-        window.location.href.split('#')[0];
+        
+        
+        if(urlHash == 'map'){
+            //$( "#map" ).scrollTop();
+            /*var sectionMap = $('#map');
+            console.log(sectionMap);
+            if (sectionMap.length) {
+              var contentMap = sectionMap.offset().length;
+              console.log(contentMap);
+             
+              
+            }*/
+            //$(this).unbind("click");
+            //var mapLocation = $("#map").position;
+            //var position = $("#box").position();
 
-        $("html, body").animate({ scrollTop: 0 }, 1000);
+            //var dime = jQuery.effects.scaledDimensions( mapLocation, 100 );  
+            //window.location.href = "#" + urlHash;
+            //console.log(mapLocation);   
+            //console.log(mapLocation.position);
+            //handleHash(urlHash); 
+            window.location.href.split('#')[0];            
+            $("html, body").animate({ scrollTop: 1150 }, 1000);
+            
+        } else {
+            handleHash(urlHash); 
+            window.location.href.split('#')[0];
+            $("html, body").animate({ scrollTop: 0 }, 1000);
+        }
+        
+
 
         //console.log(newUrl);
     });

@@ -136,26 +136,17 @@ jQuery(document).ready(function($ ) {
         
         
         if(urlHash == 'map'){
-            //$( "#map" ).scrollTop();
-            /*var sectionMap = $('#map');
-            console.log(sectionMap);
-            if (sectionMap.length) {
-              var contentMap = sectionMap.offset().length;
-              console.log(contentMap);
-             
-              
-            }*/
-            //$(this).unbind("click");
-            //var mapLocation = $("#map").position;
-            //var position = $("#box").position();
-
-            //var dime = jQuery.effects.scaledDimensions( mapLocation, 100 );  
-            //window.location.href = "#" + urlHash;
-            //console.log(mapLocation);   
-            //console.log(mapLocation.position);
-            //handleHash(urlHash); 
-            window.location.href.split('#')[0];            
-            $("html, body").animate({ scrollTop: 1150 }, 1000);
+            
+            var mapLocation = $("#map");
+            var outerHeight = mapLocation.context.defaultView.outerHeight;
+            var innerHeight = mapLocation.context.defaultView.innerHeight;
+            var scrollTop = outerHeight + innerHeight - 195;
+            //console.log('Outer: ' + outerHeight + ' | Inner: '  + innerHeight);
+            ///console.log(mapLocation);
+            
+            window.location.href.split('#')[0];           
+            $("html, body").animate({ scrollTop: scrollTop }, 1000); 
+            //$("html, body").animate({ scrollTop: 1150 }, 1000);
             
         } else {
             handleHash(urlHash); 

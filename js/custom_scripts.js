@@ -148,6 +148,7 @@ jQuery(document).ready(function($ ) {
             $("html, body").animate({ scrollTop: scrollTop }, 1000); 
             //$("html, body").animate({ scrollTop: 1150 }, 1000);
             
+            
         } else {
             handleHash(urlHash); 
             window.location.href.split('#')[0];

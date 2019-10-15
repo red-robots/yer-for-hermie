@@ -129,8 +129,8 @@ jQuery(document).ready(function($ ) {
 
     $('body').on('click', '.text .btn a', function(e){
         e.preventDefault();
-        
-        var urlHash = $(this).attr("href").substring(2);
+        var urlMap = $(this).attr("href");
+        var urlHash = urlMap.substring(2);
         //console.log(urlHash);                
 
         
@@ -138,16 +138,23 @@ jQuery(document).ready(function($ ) {
         if(urlHash == 'map'){
             
             var mapLocation = $("#map");
+            //var mapHeightTop = mapLocation.top();
             var outerHeight = mapLocation.context.defaultView.outerHeight;
             var innerHeight = mapLocation.context.defaultView.innerHeight;
-            var scrollTop = outerHeight + innerHeight - 195;
-            //console.log('Outer: ' + outerHeight + ' | Inner: '  + innerHeight);
-            ///console.log(mapLocation);
+            var Slider = $('.flexslider');
+            var sliderHeight = Slider.height();
+            var masthead = $("#masthead");
+            var masHeight = masthead.height();
+            var homeSection = $('#home-page-get-started-section');
+            var homeHeight = homeSection.outerHeight();
+
+           var scrollTop = (sliderHeight + homeHeight) - 50;
+           
             
             window.location.href.split('#')[0];           
             $("html, body").animate({ scrollTop: scrollTop }, 1000); 
             //$("html, body").animate({ scrollTop: 1150 }, 1000);
-            
+
             
         } else {
             handleHash(urlHash); 

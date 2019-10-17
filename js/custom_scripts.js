@@ -157,9 +157,10 @@ jQuery(document).ready(function($ ) {
 
             
         } else {
-            handleHash(urlHash); 
-            window.location.href.split('#')[0];
-            $("html, body").animate({ scrollTop: 0 }, 1000);
+            //handleHash(urlHash); 
+            //window.location.href.split('#')[0];
+            //$("html, body").animate({ scrollTop: 0 }, 1000);
+            window.location.href = urlMap;
         }
         
 

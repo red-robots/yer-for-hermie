@@ -131,7 +131,7 @@ jQuery(document).ready(function($ ) {
         e.preventDefault();
         var urlMap = $(this).attr("href");
         var urlHash = urlMap.substring(2);
-        //console.log(urlHash);                
+       // console.log(urlHash);                
 
         
         
@@ -156,10 +156,13 @@ jQuery(document).ready(function($ ) {
             //$("html, body").animate({ scrollTop: 1150 }, 1000);
 
             
+        } else if(urlHash == 'look-for-jobs') {
+
+            handleHash(urlHash); 
+            window.location.href.split('#')[0];
+            $("html, body").animate({ scrollTop: 0 }, 1000);
+            
         } else {
-            //handleHash(urlHash); 
-            //window.location.href.split('#')[0];
-            //$("html, body").animate({ scrollTop: 0 }, 1000);
             window.location.href = urlMap;
         }
         
